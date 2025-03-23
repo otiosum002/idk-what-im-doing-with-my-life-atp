@@ -1,0 +1,373 @@
+.stock-market {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.75rem;
+}
+
+.market-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.phase-badge {
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.phase-description {
+  background-color: #f0f9ff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.phase-icon {
+  color: #0284c7;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.phase-description p {
+  margin: 0;
+  color: #0369a1;
+  font-size: 0.9375rem;
+}
+
+.cash-balance {
+  background-color: #f0fdf4;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  color: #166534;
+}
+
+.cash-balance svg {
+  margin-right: 0.5rem;
+}
+
+.stocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.stock-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.stock-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  border-color: #e0e0e0;
+}
+
+.stock-card.selected {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.stock-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.stock-card-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.stock-sector {
+  font-size: 0.75rem;
+  color: #666;
+  background-color: #e5e7eb;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.stock-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.price-label {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.price-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  margin-right: 0.75rem;
+}
+
+.price-change {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.price-change svg {
+  margin-right: 0.25rem;
+}
+
+.price-change.positive {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.price-change.negative {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.stock-description {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.phase-impact {
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.phase-impact h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.phase-impact p {
+  font-size: 0.8125rem;
+  color: #555;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.new-price {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.trade-panel {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.trade-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.trade-panel-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.current-price {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.trade-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-control label {
+  font-size: 0.875rem;
+  color: #555;
+  min-width: 70px;
+}
+
+.quantity-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quantity-btn {
+  background-color: #f3f4f6;
+  border: none;
+  color: #4b5563;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.125rem;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.quantity-input-wrapper input {
+  width: 60px;
+  height: 32px;
+  border: none;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #333;
+  -moz-appearance: textfield;
+}
+
+.quantity-input-wrapper input::-webkit-outer-spin-button,
+.quantity-input-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.trade-total {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #333;
+  text-align: right;
+}
+
+.trade-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.buy-button,
+.sell-button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.buy-button {
+  background-color: #10b981;
+  color: white;
+}
+
+.buy-button:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+.sell-button {
+  background-color: #ef4444;
+  color: white;
+}
+
+.sell-button:hover:not(:disabled) {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.buy-button:disabled,
+.sell-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.phase-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.complete-phase-button,
+.next-phase-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.complete-phase-button {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.complete-phase-button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+.next-phase-button {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.next-phase-button:hover {
+  background-color: #0284c7;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .stocks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trade-buttons {
+    grid-template-columns: 1fr;
+  }
+} 

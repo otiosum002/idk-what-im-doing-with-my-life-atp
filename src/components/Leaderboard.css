@@ -1,0 +1,101 @@
+.leaderboard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.leaderboard-header {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.75rem;
+}
+
+.leaderboard-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.comparison-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.comparison-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.comparison-card:hover {
+  transform: translateY(-3px);
+}
+
+.comparison-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+}
+
+.difference {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.difference-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.trend-icon {
+  margin-right: 0.5rem;
+}
+
+.positive {
+  background-color: rgba(52, 211, 153, 0.1);
+}
+
+.positive .difference-value {
+  color: #10b981;
+}
+
+.positive .trend-icon {
+  color: #10b981;
+}
+
+.negative {
+  background-color: rgba(248, 113, 113, 0.1);
+}
+
+.negative .difference-value {
+  color: #ef4444;
+}
+
+.negative .trend-icon {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .comparison-container {
+    grid-template-columns: 1fr;
+  }
+} 
